@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Studies</title>
+		<link rel="icon" href="./images/favicon.png" type="image/x-icon">
+		
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+				integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+				
+		<!-- reveal.js (START)-->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="https://rawgit.com/nrivet84/reveal.js/master/css/reveal.css">
+		
+		<!-- theme -->
+		<link rel="stylesheet" href="../modules/reveal/black_modified.css" id="theme">
+		
+		<!-- reveal.js (END)-->
+		
+		<!-- load jQuery -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+		
+		<!-- load Highcharts and modules -->
+		<script src="https://rawgit.com/nrivet84/modules/master/highcharts/highcharts.js" integrity="sha384-H862ZDfjFkuNQYffQKpz3LTq4buBSUFKHCsbbuqVIey6wPArtTbWs3DTCiLvtYcb" crossorigin="anonymous"></script>
+		<script src="https://rawgit.com/nrivet84/modules/master/highcharts/data.js"></script>
+		<script src="https://rawgit.com/nrivet84/modules/master/highcharts/highcharts-more.js"></script>
+		<!-- style for Highcharts -->
+		<link rel="stylesheet" href="../modules/highcharts/highcharts_modified.css">
+		<script>
+			Highcharts.setOptions({
+				title: {
+					style: {
+						color: '#d4d4d4',
+					}
+				},
+				subtitle: {
+					style: {
+						color: '#d4d4d4',
+					}
+				},
+				chart: {
+					backgroundColor: '#252526',
+					zoomType: 'x',
+				},
+				credits: {
+					enabled: false,
+				},
+				legend: {
+					enabled: true,
+					itemStyle: {
+						color: '#d4d4d4',
+						cursor: 'pointer',
+						fontSize: '12px',
+						fontWeight: 'normal',
+						textOverflow: 'ellipsis',
+					},
+					itemHoverStyle: {
+						color: '#5a5a5a',
+						cursor: 'pointer',
+						fontSize: '12px',
+						fontWeight: 'normal',
+						textOverflow: 'ellipsis',
+					},
+					itemHiddenStyle: {
+						color: '#5a5a5a',
+						cursor: 'pointer',
+						fontSize: '12px',
+						fontWeight: 'normal',
+						textOverflow: 'ellipsis',
+					},
+				},
+				colors: ['#578CA9', '#F6D155', '#004B8D', '#F2552C', '#95DEE3', '#EDCDC2', '#CE3175', '#5A7247', '#CFB095', '#4C6A92'],
+				yAxis: {
+					labels: {
+						style: {
+							color: '#5a5a5a',
+							fontSize: '12px',
+							fontWeight: 'normal',
+						}
+					},
+					title: {
+						style: {
+							color: '#5a5a5a',
+							fontSize: '12px',
+							fontWeight: 'normal',
+						}
+					},
+					gridLineColor: '#5a5a5a',
+					gridLineWidth: 1,
+				},
+				xAxis: {
+					labels: {
+						style: {
+							color: '#5a5a5a',
+							fontSize: '12px',
+							fontWeight: 'normal',
+						}
+					},
+					title: {
+						style: {
+							color: '#5a5a5a',
+							fontSize: '12px',
+							fontWeight: 'normal',
+						}
+					},
+					gridLineColor: '#5a5a5a',
+					gridLineWidth: 1,
+					lineColor: '#5a5a5a',
+					tickColor: '#5a5a5a',
+				},
+			});
+		</script>
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>Slide 1</section>
+				<section>
+					<section>
+						<div>chart</div>
+						<center>
+							<div id="container" style="height: 600px; width: 800px"></div>
+							<script type="text/javascript">
+								Highcharts.chart('container', {
+									title: {
+										text: 'Title styles ...'
+									},
+
+									subtitle: {
+										text: '... and subtitle styles'
+									},
+									xAxis: {
+										categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+									},
+									yAxis: {
+										title: {
+											text: 'title of y axis'
+										}
+									},
+									series: [{
+										data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+										type: 'line'
+									},
+									{
+										data: [39.9, 31.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+										type: 'line'
+									}]
+								});
+							</script>
+						</center>
+					</section>
+					<section>
+						<h1>h1</h1>
+						<h2>h2</h2>
+						<h3>h3</h3>
+						<h4>h4</h4>
+						<div>div</div>
+						<a href="index.html">link</a>
+					</section>
+				</section>
+				<section>Slide 3</section>
+			</div>
+		</div>
+
+		<script src="https://rawgit.com/nrivet84/reveal.js/master/lib/js/head.min.js"></script>
+		<script src="https://rawgit.com/nrivet84/reveal.js/master/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'https://rawgit.com/nrivet84/reveal.js/master/plugin/markdown/marked.js' },
+					{ src: 'https://rawgit.com/nrivet84/reveal.js/master/plugin/markdown/markdown.js' },
+					{ src: 'https://rawgit.com/nrivet84/reveal.js/master/plugin/notes/notes.js', async: true },
+					{ src: 'https://rawgit.com/nrivet84/reveal.js/master/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				],
+				// in order to get highcharts right
+				minScale: 1,
+				maxScale: 1,
+			});
+		</script>
+		
+	</body>
+</html>
