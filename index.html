@@ -132,7 +132,7 @@
 						<div>chart</div>
 						<center>
 							<div id="container" style="height: 600px; width: 800px"></div>
-							<script type="text/javascript">
+							<!--<script type="text/javascript">
 								Highcharts.chart('container', {
 									title: {
 										text: 'Title styles ...'
@@ -157,6 +157,26 @@
 										data: [39.9, 31.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
 										type: 'line'
 									}]
+								});
+							</script>-->
+							<script type="text/javascript">
+								$.get('./data/sample.csv', function(csv) {
+									$('#container').highcharts({
+										chart: {
+											type: 'line',
+										},
+										data: {
+											csv: csv,
+										},
+										yAxis: {
+											title: {
+												text: '# users'
+											}
+										},
+										title: {
+											text: 'number of different users using analytics app by month'
+										}
+									});
 								});
 							</script>
 						</center>
